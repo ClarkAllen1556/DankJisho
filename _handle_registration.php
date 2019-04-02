@@ -55,6 +55,6 @@ if(!$valid) {
 $query = "insert into Users(Email, UserName, Password) values ('" . $email . "','" . $username . "','". $password1 ."');";
 $result = $conn->query($query, PDO::FETCH_ASSOC);
 
-header("Location: register.php");
+header("Location: login.php");
 exit;
 ?>
