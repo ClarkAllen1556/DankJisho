@@ -38,14 +38,15 @@ session_start();
     <h2> About Dank Jisho </h2>
     <div id="TextBlob">
         <p>
-            This website is made by <span title="I really like curry">Allen Clark</span> of Boise State University.
-            <br> More content is on the way...
+            This website is made by <span title="I really like curry">Allen Clark</span> of Boise State University. More content is on the way...
 		</p>
 		<p>
 			Links to my things:
-			<a href='https://github.com/ClarkAllen1556/DankJisho'>Dank Jisho: GitHub</a>
-			<a href='https://github.com/ClarkAllen1556'>GitHub</a>
-			<a rel="me" href='https://toot.cafe/@The_A_C'>Mastodon</a>
+			<p>
+				<a href='https://github.com/ClarkAllen1556/DankJisho'>Dank Jisho: GitHub</a>
+				<a href='https://github.com/ClarkAllen1556'>GitHub</a>
+				<a rel="me" href='https://toot.cafe/@The_A_C'>Mastodon</a>
+			</p>
 		</p>
     </div>
 </body>
