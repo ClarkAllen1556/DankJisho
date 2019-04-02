@@ -1,0 +1,4 @@
+/.vscode
+/*.code-workspace
+# --- remove this after doing php 
+test.php

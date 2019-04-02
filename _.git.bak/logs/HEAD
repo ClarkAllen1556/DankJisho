@@ -1,0 +1,33 @@
+0000000000000000000000000000000000000000 7a563fc456ea94849fe167a1a9efc85ef1dff059 Allen <allenclark@u.boisestate.edu> 1549936836 -0700	commit (initial): initial
+7a563fc456ea94849fe167a1a9efc85ef1dff059 8d4c98d273da58385aedeaa4305023141ca0b80a Allen <allenclark@u.boisestate.edu> 1549937295 -0700	commit: scripts
+8d4c98d273da58385aedeaa4305023141ca0b80a e69267f5b9cc4a2651c9eb94a88890bf47ff846f Allen <allenclark@u.boisestate.edu> 1549937389 -0700	commit: formatting
+e69267f5b9cc4a2651c9eb94a88890bf47ff846f ebcc888fe417625ea0090216a65a7a7ec5e5344f Allen <allenclark@u.boisestate.edu> 1549960187 -0700	commit: testing
+ebcc888fe417625ea0090216a65a7a7ec5e5344f 5787ebd71382ed7d6a2f3ff4ab56af56b2866424 Allen <allenclark@u.boisestate.edu> 1549960909 -0700	commit: modified:
+5787ebd71382ed7d6a2f3ff4ab56af56b2866424 317a743f2098b6021d2a55918c46eb513d9c4a6b Allen <allenclark@u.boisestate.edu> 1549963130 -0700	commit: modified:
+317a743f2098b6021d2a55918c46eb513d9c4a6b f7ca1e2f21f2018686e225e3ce0618b82b563f55 Allen <allenclark@u.boisestate.edu> 1549963230 -0700	commit: logo testing
+f7ca1e2f21f2018686e225e3ce0618b82b563f55 da057fe33ee2cfbf063c11580801ac7ef43ab910 Allen <allenclark@u.boisestate.edu> 1549965753 -0700	commit: moreThings
+da057fe33ee2cfbf063c11580801ac7ef43ab910 9b3424da6cdfc22583e57d18dfa9f9ac527a460c Allen <allenclark@u.boisestate.edu> 1550006721 -0700	commit: someMoreStuff
+9b3424da6cdfc22583e57d18dfa9f9ac527a460c 991c429c26b4886ed2f934b6cb3202c1131bb034 Allen <allenclark@u.boisestate.edu> 1550112843 -0700	commit: added in icons and such
+991c429c26b4886ed2f934b6cb3202c1131bb034 64e05b30c87203b0f09f7ea546a77f91083de7c8 Allen <allenclark@u.boisestate.edu> 1550651642 -0700	commit: Added forums page and fixed footer title links
+64e05b30c87203b0f09f7ea546a77f91083de7c8 4817a68a348d792b6ce07789e81a9549fa9a045b Allen <allenclark@u.boisestate.edu> 1550653316 -0700	commit: master
+4817a68a348d792b6ce07789e81a9549fa9a045b 1d27d0d2a6525b04641daeb6b42c424a51ab653e Allen <allenclark@u.boisestate.edu> 1550653541 -0700	commit: login/register
+1d27d0d2a6525b04641daeb6b42c424a51ab653e cb5886cd596c5be3bb1f6adeb8ca01e80f086ff4 Allen <allenclark@u.boisestate.edu> 1550654944 -0700	commit: about
+cb5886cd596c5be3bb1f6adeb8ca01e80f086ff4 bad9705a4face30d1dabac60919198bd3bdf5140 Allen <allenclark@u.boisestate.edu> 1550654981 -0700	commit: about
+bad9705a4face30d1dabac60919198bd3bdf5140 958976188a24cb83f32102ce7c12d4f80cbc0b2c Allen <allenclark@u.boisestate.edu> 1550655565 -0700	commit: formatting
+958976188a24cb83f32102ce7c12d4f80cbc0b2c 71d4bfd96d6c3f857c4f683a470ccb7856c6dab6 Allen <allenclark@u.boisestate.edu> 1550715337 -0700	commit: text fields
+71d4bfd96d6c3f857c4f683a470ccb7856c6dab6 b5473f5efa3d0c54413676c3ea25ed5842673790 Allen <allenclark@u.boisestate.edu> 1551169085 -0700	commit: base sql tables
+b5473f5efa3d0c54413676c3ea25ed5842673790 163a771b5fb0cad8d265fe80ee212272454e676b Allen <allenclark@u.boisestate.edu> 1551171372 -0700	commit: Final Tables
+163a771b5fb0cad8d265fe80ee212272454e676b 6d804fe84f60b0fc76d93a60573ad32007a3d120 Allen <allenclark@u.boisestate.edu> 1551247628 -0700	commit: hw5 finished added more sql stuff
+6d804fe84f60b0fc76d93a60573ad32007a3d120 1bef5e660adc27b516122c3d21a01340fc1b8aa3 Allen <allenclark@u.boisestate.edu> 1551255838 -0700	commit: doctype
+1bef5e660adc27b516122c3d21a01340fc1b8aa3 6982eebd69e80510226499a99fe3ac903b9daa9e Allen <allenclark@u.boisestate.edu> 1551256112 -0700	commit: doctype
+6982eebd69e80510226499a99fe3ac903b9daa9e ca10b47c3630bbedb5b12acde498d0a9da59f2bc Allen <allenclark@u.boisestate.edu> 1551256277 -0700	commit: misplacedQuote
+ca10b47c3630bbedb5b12acde498d0a9da59f2bc dff7c1a5dd88af8eaa7c869fbc80f86adbef3a8e Allen <allenclark@u.boisestate.edu> 1551256479 -0700	commit: fixedError
+dff7c1a5dd88af8eaa7c869fbc80f86adbef3a8e 21bcef58945a37e86287fa590a0d21b542862a13 Allen <allenclark@u.boisestate.edu> 1551289675 -0700	commit: .gitignore
+21bcef58945a37e86287fa590a0d21b542862a13 5e1b1be266b172617a941528e79cd10cc6d9ec31 Allen <allenclark@u.boisestate.edu> 1551289865 -0700	commit: .gitignore
+5e1b1be266b172617a941528e79cd10cc6d9ec31 e7e80c41ccba33ca3e30ee2bc42c067fbdd232ee Allen <allenclark@u.boisestate.edu> 1551496321 -0700	commit: favicon
+e7e80c41ccba33ca3e30ee2bc42c067fbdd232ee f7eb9e4ab589d9f90fd8c36daed19f48b2f497c5 Allen <allenclark@u.boisestate.edu> 1553975972 -0600	commit: added in login/logout and local db connection
+f7eb9e4ab589d9f90fd8c36daed19f48b2f497c5 670c0ae995248956581c470d771a5c9dc3f6f3d2 Allen <allenclark@u.boisestate.edu> 1553976842 -0600	commit: index_forum_col
+670c0ae995248956581c470d771a5c9dc3f6f3d2 862fa080bf455e1adeb1c4ec84511d670b53bf1c Allen <allenclark@u.boisestate.edu> 1553977130 -0600	commit: changed_search_box
+862fa080bf455e1adeb1c4ec84511d670b53bf1c 5d25ffa4e943d93df6cb3a831f78bd959d95632c Allen <allenclark@u.boisestate.edu> 1553978739 -0600	commit: get_jisho_data
+5d25ffa4e943d93df6cb3a831f78bd959d95632c c36c9d0fb40a91da39cab1c62a72a4fd18bdc70c Allen <allenclark@u.boisestate.edu> 1554066650 -0600	commit: json_object_fetch
+c36c9d0fb40a91da39cab1c62a72a4fd18bdc70c 552a79c78a588a86b44cb2fdef866c1482379ad3 Allen <allenclark@u.boisestate.edu> 1554068477 -0600	commit: formatted_json

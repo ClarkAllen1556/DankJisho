@@ -1,0 +1,40 @@
+.Link {
+    font-size: 12px;
+    text-decoration: none;
+    color: #cc9900;
+    outline-color: #664d00;
+}
+
+html {
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+	color: #404040;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+textarea {
+	height: 250px;
+	width: 500px;
+}
+
+.TextImage {
+    height: 20px;
+    width: 20px;
+}
+
+.NamedLink {
+    text-decoration: none;
+    color: inherit; /* makes not change color on click */
+}
+
+.EntryBox {
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #cc9900;
+    background-color: #ffe699;
+    height: 20px;
+}

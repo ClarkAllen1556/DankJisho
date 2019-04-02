@@ -1,0 +1,20 @@
+#Search {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.SearchBox {
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #cc9900;
+    background-color: #ffe699;
+    height: 20px;
+}
+
+.SearchButton {
+    height: 20px;
+    width: 20px;
+}
+

@@ -1,0 +1,57 @@
+.Col {
+    float: right;
+}
+
+#Recent_Col {
+    width: 5%;
+}
+
+#Footer {
+    background-color: white;
+    border-color: white;
+}
+
+#Recent_Col {
+    width: 30px;
+    float: right;
+}
+
+#Forum_Col {
+    width: 500px; /*TODO make this better */ 
+}
+
+#Register {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#TextBlob {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #ffe699;
+    border-radius: 5px;
+    border-color: #cc9900;
+    flex: 50%;
+}
+
+.Row {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    margin-left: auto;
+    margin-right: auto;
+    align-content: space-around;
+}
+
+.Column {
+    /* flex: 50%; */
+    /* position: relative; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffe699;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #cc9900;
+}
