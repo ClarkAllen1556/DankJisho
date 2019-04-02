@@ -6,22 +6,22 @@ session_start();
 
 <head>
 	<title>Forums - DankJisho</title>
-	<link rel="stylesheet" href="styles/title_section.css">
-	<link rel="stylesheet" href="styles/search_section.css">
-	<link rel="stylesheet" href="styles/content_section.css">
-	<link rel="stylesheet" href="styles/global.css">
-	<link rel="stylesheet" href="styles/footer_section.css">
+	<link rel='stylesheet' href='styles/title_section.css'>
+	<link rel='stylesheet' href='styles/search_section.css'>
+	<link rel='stylesheet' href='styles/content_section.css'>
+	<link rel='stylesheet' href='styles/global.css'>
+	<link rel='stylesheet' href='styles/footer_section.css'>
 	<link rel='icon' type='image/x-icon' href='favicon.ico' />
 </head>
 <header>
-	<div id="Title">
-		<span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
-		<h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Jisho </a> </span></h1>
+	<div id='Title'>
+		<span class='UpTitleIcons'> <img src='icons/logo_cute.png'> </span>
+		<h1><span class='UpTitle'> <a class='NamedLink' href='index.php'>Dank Jisho </a> </span></h1>
 	</div>
-	<div id="Search">
-		<form method='get' action="search.php">
-			<input class='Search' class='Box' type='text' id='search' name='search' placeholder='New search...''> <!-- TODO This image is not resizing-->
-			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png"> </i> --> </button>
+	<div id='Search'>
+		<form method='get' action='search.php'>
+			<input class='Search' class='Box' type='text' name='search' placeholder='New search...'> <!-- TODO This image is not resizing-->
+			<button type='submit' class=''> <i class='SearchButton'> Search...<!-- <img class='TextImage' src='icons/searchbox_icon.png'> </i> --> </button>
 		</form>
 		<?php
 		if(isset($_SESSION["logged_in"]))
