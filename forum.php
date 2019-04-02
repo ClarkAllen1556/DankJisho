@@ -51,19 +51,14 @@ session_start();
 				. "</td><td> {$post['Posted']} </td></tr>";
 			}
 			echo "</table>";
-			?>
-		</div>
-		<div>
-			<?php
+
 			if (isset($_SESSION['logged_in'])) {
 			?>
 				<form method='post' action='./new_forum_post.php'>
 					<button type='button id='NewPost' value='NewPost' name='newpost' href='./new_forum_post.php'> New Post </button>
 				</form>
 			<?php
-			} /*else {
-				echo "<input id='NewPost' type='submit' value='Login' href='login.php'>";
-			}*/
+			}
 			?>
 		</div>
 	</div>
