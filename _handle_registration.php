@@ -32,18 +32,18 @@ $conn = $dao->getConnection();
 $query = "select * from Users where Email = '" . $email . "';";
 $result = $conn->query($query, PDO::FETCH_ASSOC);
 
-if($result && !$email != NULL) {
-	$messages[] = "This email address is already associated with an account";
-	$valid = false;
-}
+// if($result && !$email != NULL) {
+// 	$messages[] = "This email address is already associated with an account";
+// 	$valid = false;
+// }
 
-$query = "select * from Users where UserName = '" . $username . "';";
-$result = $conn->query($query, PDO::FETCH_ASSOC);
+// $query = "select * from Users where UserName = '" . $username . "';";
+// $result = $conn->query($query, PDO::FETCH_ASSOC);
 
-if($result && $username != NULL) {
-	$messages[] = "That username is already taken";
-	$valid = false;
-}
+// if($result && $username != NULL) {
+// 	$messages[] = "That username " . print_r($result) . " is already taken";
+// 	$valid = false;
+// }
 
 if(!$valid) {
 	$_SESSION["messages"] = $messages;
