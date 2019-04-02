@@ -13,16 +13,18 @@ $dao = new Dao();
 $conn = $dao->getConnection();
 $userEmail = $_POST["email"];
 $pass = $_POST["password"]; // only to be used in the query
+
+// if they enter null for user and pass
+if($userEmail == NULL || $pass == NULL) {
+	$_SESSION['message'] = "Error, the password or password was incorrect.";
+	header("Location: login.php");
+	exit();
+}
+
 $query = "select * from Users where Email = '$userEmail' and Password = '$pass';" ;
 
 $password_in_the_database = "abc123";
 $result = ($conn->query($query, PDO::FETCH_ASSOC))->fetchObject();
-
-// if (!isset($_POST["email"])) {
-// 	$_SESSION['message'] = "Please enter the email associated with your account";
-// 	header("Location: login.php");
-// 	exit();
-// }
 
 if ($result->Password != $_POST["password"]) {
 	$_SESSION['message'] = "Error, the password or password was incorrect.";
@@ -32,7 +34,7 @@ if ($result->Password != $_POST["password"]) {
 	$_SESSION['logged_in'] = true;
 	$_SESSION['username'] = $result->UserName;
 
-	header("Location: forum.php"); // TODO
+	header("Location: login.php"); // TODO
 	// header('Location: ' . $_SERVER['HTTP_REFERER']); // TODO this does not work it seems
 }
 ?>
