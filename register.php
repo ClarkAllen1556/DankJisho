@@ -20,10 +20,10 @@ session_start();
 	</div>
 	<div id="Search">
 		<form method='get' action="search.php">
-			<input class='Search' class='Box' type="text" placeholder="New search..."> <!-- TODO This image is not resizing-->
+			<input class='Search' class='Box' type='text' name='search' placeholder="New search..."> <!-- TODO This image is not resizing-->
 			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png"> </i> --> </button>
 		</form>
-		<span> <a class="Link"href="login.php">Login</a> <a class="Link" href="register.html">Register</a></span>
+		<span> <a class="Link"href="login.php">Login</a> <a class="Link" href="register.php">Register</a></span>
 	</div>
 </header>
 
