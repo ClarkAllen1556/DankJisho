@@ -40,7 +40,13 @@ session_start();
         <p>
             This website is made by <span title="I really like curry">Allen Clark</span> of Boise State University.
             <br> More content is on the way...
-        </p>
+		</p>
+		<p>
+			Links to my things:
+			<a href='https://github.com/ClarkAllen1556/DankJisho'>Dank Jisho: GitHub</a>
+			<a href='https://github.com/ClarkAllen1556'>GitHub</a>
+			<a rel="me" href='https://toot.cafe/@The_A_C'>Mastodon</a>
+		</p>
     </div>
 </body>
 <div id="Footer">

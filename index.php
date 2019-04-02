@@ -19,7 +19,7 @@ session_start();
     </div>
     <div id="Title">
         <span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
-        <h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Jisho Dank </a> </span></h1>
+        <h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Jisho</a> </span></h1>
     </div>
     <div id="Search">
         <form method='get' action="search.php">
