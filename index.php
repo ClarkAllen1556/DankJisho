@@ -5,25 +5,25 @@ session_start();
 <html>
 
 <head>
-    <title>DankJisho</title>
-    <link rel="stylesheet" href="styles/title_section.css">
-    <link rel="stylesheet" href="styles/search_section.css">
-    <link rel="stylesheet" href="styles/content_section.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/footer_section.css">
-    <link rel='icon' type='image/x-icon' href='favicon.ico' />
+	<title>DankJisho</title>
+	<link rel="stylesheet" href="styles/title_section.css">
+	<link rel="stylesheet" href="styles/search_section.css">
+	<link rel="stylesheet" href="styles/content_section.css">
+	<link rel="stylesheet" href="styles/global.css">
+	<link rel="stylesheet" href="styles/footer_section.css">
+	<link rel='icon' type='image/x-icon' href='favicon.ico' />
 </head>
 <header>
-    <div>
-        <span> <a id="Path" class="Link" href="index.php"> Home </a> </span>
-    </div>
-    <div id="Title">
-        <span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
-        <h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Jisho</a> </span></h1>
-    </div>
-    <div id="Search">
-        <form method='get' action="search.php">
-            <input class='SearchBox' type='text' id='search' name='search' placeholder='New search...''> <!-- TODO This image is not resizing-->
+	<div>
+		<span> <a id="Path" class="Link" href="index.php"> Home </a> </span>
+	</div>
+	<div id="Title">
+		<span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
+		<h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Jisho</a> </span></h1>
+	</div>
+	<div id="Search">
+		<form method='get' action="search.php">
+			<input class='SearchBox' type='text' id='search' name='search' placeholder='New search...''> <!-- TODO This image is not resizing-->
 			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png"> </i> --> </button>
 		</form>
 		<?php
@@ -32,18 +32,18 @@ session_start();
 		else
 			echo "<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='register.php'>Register</a></span>";
 		?>
-    </div>
+	</div>
 </header>
 
 <body>
-    <div class="Row">
-        <div class="Column" id="Recent_Col">
-            <img class="TextImage" src="icons/recent_search_icon.png"> <a class="Link" href="recent.php"><h3> Recent </h3></a>
-        </div>
-        <div class="Column" id="Forum_Col">
-            <!-- <span><a href="test.php"> testing link</a></span> -->
-            <img class="TextImage" src="icons/forum_icon.png"> <a class="Link" href="forum.php"> Forums </a>
-            <?php
+	<div class="Row">
+		<div class="Column" id="Recent_Col">
+			<img class="TextImage" src="icons/recent_search_icon.png"> <a class="Link" href="recent.php"><h3> Recent </h3></a>
+		</div>
+		<div class="Column" id="Forum_Col">
+			<!-- <span><a href="test.php"> testing link</a></span> -->
+			<img class="TextImage" src="icons/forum_icon.png"> <a class="Link" href="forum.php"> Forums </a>
+			<?php
 			include "./_handle_forum.php";
 
 			$listings = getForumListings();
@@ -59,21 +59,21 @@ session_start();
 			echo "</table>";
 			?>
 		</div>
-    </div>
+	</div>
 </body>
 <div id="Footer">
-    <span>
-        <a class="Link" href="about.php"> About |</a>
-    </span>
-    <span>
-        <a class="Link" href="forum.php"> Forums |</a>
-    </span>
-    <span>
-        <a class="Link" href="index.php"> Home |</a>
-    </span>
-    <span>
-        <a class="Link" href="recent.php"> Recent </a>
-    </span>
+	<span>
+		<a class="Link" href="about.php"> About |</a>
+	</span>
+	<span>
+		<a class="Link" href="forum.php"> Forums |</a>
+	</span>
+	<span>
+		<a class="Link" href="index.php"> Home |</a>
+	</span>
+	<span>
+		<a class="Link" href="recent.php"> Recent </a>
+	</span>
 </div>
 
 </html>

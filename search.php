@@ -5,22 +5,22 @@ session_start();
 <html>
 
 <head>
-    <title>Forums - DankJisho</title>
-    <link rel="stylesheet" href="styles/title_section.css">
-    <link rel="stylesheet" href="styles/search_section.css">
-    <link rel="stylesheet" href="styles/content_section.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/footer_section.css">
-    <link rel='icon' type='image/x-icon' href='favicon.ico' />
+	<title>Forums - DankJisho</title>
+	<link rel="stylesheet" href="styles/title_section.css">
+	<link rel="stylesheet" href="styles/search_section.css">
+	<link rel="stylesheet" href="styles/content_section.css">
+	<link rel="stylesheet" href="styles/global.css">
+	<link rel="stylesheet" href="styles/footer_section.css">
+	<link rel='icon' type='image/x-icon' href='favicon.ico' />
 </head>
 <header>
-    <div id="Title">
-        <span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
-        <h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Jisho </a> </span></h1>
-    </div>
-    <div id="Search">
-        <form method='get' action="search.php">
-            <input class='SearchBox' type='text' id='search' name='search' placeholder='New search...''> <!-- TODO This image is not resizing-->
+	<div id="Title">
+		<span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
+		<h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Jisho </a> </span></h1>
+	</div>
+	<div id="Search">
+		<form method='get' action="search.php">
+			<input class='SearchBox' type='text' id='search' name='search' placeholder='New search...''> <!-- TODO This image is not resizing-->
 			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png"> </i> --> </button>
 		</form>
 		<?php
@@ -29,16 +29,16 @@ session_start();
 		else
 			echo "<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='register.php'>Register</a></span>";
 		?>
-    </div>
+	</div>
 </header>
 <body>
 	<?php
 	require_once "_handle_search.php";
 	parseJishoJson();
 	?>
-    <h2><a class="NamedLink" href=index.php><?php echo "Results for: \"" . $_SESSION['searchString'] . "\""?></a></h2>
-    <div class="Row">
-        <div class="Column" id="Forum_Col">
+	<h2><a class="NamedLink" href=index.php><?php echo "Results for: \"" . $_SESSION['searchString'] . "\""?></a></h2>
+	<div class="Row">
+		<div class="Column" id="Forum_Col">
 		<!-- <span><a href="test.php"> testing link</a></span> -->
 		<!-- <img class="TextImage" src="icons/forum_icon.png"> <a class="Link" href="forum.php"> Forums </a> -->
 		<?php
@@ -49,18 +49,18 @@ session_start();
 	</div>
 </body>
 <div id="Footer">
-    <span>
-        <a class="Link" href="about.php"> About |</a>
-    </span>
-    <span>
-        <a class="Link" href="forum.php"> Forum |</a>
-    </span>
-    <span>
-        <a class="Link" href="index.php"> Home |</a>
-    </span>
-    <span>
-        <a class="Link" href="recent.php"> Recent </a>
-    </span>
+	<span>
+		<a class="Link" href="about.php"> About |</a>
+	</span>
+	<span>
+		<a class="Link" href="forum.php"> Forum |</a>
+	</span>
+	<span>
+		<a class="Link" href="index.php"> Home |</a>
+	</span>
+	<span>
+		<a class="Link" href="recent.php"> Recent </a>
+	</span>
 </div>
 
 </html>

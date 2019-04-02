@@ -4,64 +4,64 @@ session_start();
 <html>
 
 <head>
-    <title>Register New Account - DankJisho</title>
-    <link rel="stylesheet" href="styles/title_section.css">
-    <link rel="stylesheet" href="styles/search_section.css">
-    <link rel="stylesheet" href="styles/content_section.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/footer_section.css">
-    <link rel="stylesheet" href="styles/register_section.css">
-    <link rel='icon' type='image/x-icon' href='favicon.ico' />
+	<title>Register New Account - DankJisho</title>
+	<link rel="stylesheet" href="styles/title_section.css">
+	<link rel="stylesheet" href="styles/search_section.css">
+	<link rel="stylesheet" href="styles/content_section.css">
+	<link rel="stylesheet" href="styles/global.css">
+	<link rel="stylesheet" href="styles/footer_section.css">
+	<link rel="stylesheet" href="styles/register_section.css">
+	<link rel='icon' type='image/x-icon' href='favicon.ico' />
 </head>
 <header>
-    <div id="Title">
-        <span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
-        <h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Jisho </a> </span></h1>
-    </div>
-    <div id="Search">
-        <form method='get' action="search.php">
-            <input class="SearchBox" type="text" placeholder="New search..."> <!-- TODO This image is not resizing-->
+	<div id="Title">
+		<span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
+		<h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Jisho </a> </span></h1>
+	</div>
+	<div id="Search">
+		<form method='get' action="search.php">
+			<input class="SearchBox" type="text" placeholder="New search..."> <!-- TODO This image is not resizing-->
 			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png"> </i> --> </button>
 		</form>
 		<span> <a class="Link"href="login.php">Login</a> <a class="Link" href="register.html">Register</a></span>
-    </div>
+	</div>
 </header>
 
 <body>
-    <h2> Register for a new account </h2>
-    <div id="Register">
-        <form method="post" action="handler.php">
-            <div>Email: <input class="EntryBox" type="text" name="Email" placeholder="dank.boi@coolpeeps.edu"></div>
-            <div>Username: <input class="EntryBox" value="<?php echo isset($_SESSION['form_input']['username']) ? $_SESSION['form_input']['username'] : ''; ?>"
-                type="text" id="username" name="username"></div>
-            <div>Password: <input class="EntryBox" type="password" name="password"></div>
-            <div>Confirm password: <input class="EntryBox" type="password" name="password"></div>
-            <div><input type="submit" value="Register"></div>
-            <?php
-if (isset($_SESSION['messages'])) {
-    foreach ($_SESSION['messages'] as $message) {
-        echo "<div class='message bad'>{$message}</div>";
-    }
-}
-unset($_SESSION['message']);
-unset($_SESSION['form_input']);
-?>
-        </form>
-    </div>
+	<h2> Register for a new account </h2>
+	<div id="Register">
+		<form method="post" action="handler.php">
+			<div>Email: <input class="EntryBox" type="text" name="Email" placeholder="dank.boi@coolpeeps.edu"></div>
+			<div>Username: <input class="EntryBox" value="<?php echo isset($_SESSION['form_input']['username']) ? $_SESSION['form_input']['username'] : ''; ?>"
+				type="text" id="username" name="username"></div>
+			<div>Password: <input class="EntryBox" type="password" name="password"></div>
+			<div>Confirm password: <input class="EntryBox" type="password" name="password"></div>
+			<div><input type="submit" value="Register"></div>
+			<?php
+			if (isset($_SESSION['messages'])) {
+				foreach ($_SESSION['messages'] as $message) {
+					echo "<div class='message bad'>{$message}</div>";
+				}
+			}
+			unset($_SESSION['message']);
+			unset($_SESSION['form_input']);
+			?>
+		</form>
+	</div>
 </body>
 <div id="Footer">
-    <span>
-        <a class="Link" href="about.php"> About |</a>
-    </span>
-    <span>
-        <a class="Link" href="forum.php"> Forums |</a>
-    </span>
-    <span>
-        <a class="Link" href="index.php"> Home |</a>
-    </span>
-    <span>
-        <a class="Link" href="recent.php"> Recent </a>
-    </span>
+	<span>
+		<a class="Link" href="about.php"> About |</a>
+	</span>
+	<span>
+		<a class="Link" href="forum.php"> Forums |</a>
+	</span>
+	<span>
+		<a class="Link" href="index.php"> Home |</a>
+	</span>
+	<span>
+		<a class="Link" href="recent.php"> Recent </a>
+	</span>
 </div>
 
 </html>

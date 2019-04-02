@@ -5,22 +5,22 @@ session_start();
 <html>
 
 <head>
-    <title>Forums - DankJisho</title>
-    <link rel="stylesheet" href="styles/title_section.css">
-    <link rel="stylesheet" href="styles/search_section.css">
-    <link rel="stylesheet" href="styles/content_section.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/footer_section.css">
-    <link rel='icon' type='image/x-icon' href='favicon.ico' />
+	<title>Forums - DankJisho</title>
+	<link rel="stylesheet" href="styles/title_section.css">
+	<link rel="stylesheet" href="styles/search_section.css">
+	<link rel="stylesheet" href="styles/content_section.css">
+	<link rel="stylesheet" href="styles/global.css">
+	<link rel="stylesheet" href="styles/footer_section.css">
+	<link rel='icon' type='image/x-icon' href='favicon.ico' />
 </head>
 <header>
-    <div id="Title">
-        <span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
-        <h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Forum </a> </span></h1>
-    </div>
-    <div id="Search">
-        <form method='get' action="search.php">
-            <input class="SearchBox" type="text" placeholder="New search..."> <!-- TODO This image is not resizing-->
+	<div id="Title">
+		<span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
+		<h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Forum </a> </span></h1>
+	</div>
+	<div id="Search">
+		<form method='get' action="search.php">
+			<input class="SearchBox" type="text" placeholder="New search..."> <!-- TODO This image is not resizing-->
 			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png"> </i> --> </button>
 		</form>
 		<?php
@@ -29,46 +29,46 @@ session_start();
 		else
 			echo "<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='register.php'>Register</a></span>";
 		?>
-    </div>
+	</div>
 </header>
 
 <body>
-    <h2><a class="NamedLink" href=forum.php>[NAME_OF_POST]</a></h2>
-    <div class="Row">
-        <div class="Column" id="Forum_Col">
-            <!-- <span><a href="test.php"> testing link</a></span> -->
-            <img class="TextImage" src="icons/forum_icon.png"> <a class="Link" href="forum.php"> Forums </a>
-            <?php
-            include "./_handle_forum.php";
+	<h2><a class="NamedLink" href=forum.php>[NAME_OF_POST]</a></h2>
+	<div class="Row">
+		<div class="Column" id="Forum_Col">
+			<!-- <span><a href="test.php"> testing link</a></span> -->
+			<img class="TextImage" src="icons/forum_icon.png"> <a class="Link" href="forum.php"> Forums </a>
+			<?php
+			include "./_handle_forum.php";
 
-            $listings = getForumListings();
+			$listings = getForumListings();
 
-            echo "<table id='listings'>";
-            echo "<td><h4> Title </h4></td>". "<td><h4> Author </h4></td>" . "<td><h4> Posted </h4></td>";
-            foreach ($listings as $post) {
-                echo "<tr><td>"
-                . "<a href=\"http://www.google.com\">" . htmlspecialchars($post['Title'])
-                . "<td>" . htmlspecialchars($post['Author'])
-                . "</td><td> {$post['Posted']} </td></tr>";
-            }
-            echo "</table>";
-            ?>
-        </div>
-    </div>
+			echo "<table id='listings'>";
+			echo "<td><h4> Title </h4></td>". "<td><h4> Author </h4></td>" . "<td><h4> Posted </h4></td>";
+			foreach ($listings as $post) {
+				echo "<tr><td>"
+				. "<a href=\"http://www.google.com\">" . htmlspecialchars($post['Title'])
+				. "<td>" . htmlspecialchars($post['Author'])
+				. "</td><td> {$post['Posted']} </td></tr>";
+			}
+			echo "</table>";
+			?>
+		</div>
+	</div>
 </body>
 <div id="Footer">
-    <span>
-        <a class="Link" href="about.php"> About |</a>
-    </span>
-    <span>
-        <a class="Link" href="forum.php"> Forum |</a>
-    </span>
-    <span>
-        <a class="Link" href="index.php"> Home |</a>
-    </span>
-    <span>
-        <a class="Link" href="recent.php"> Recent </a>
-    </span>
+	<span>
+		<a class="Link" href="about.php"> About |</a>
+	</span>
+	<span>
+		<a class="Link" href="forum.php"> Forum |</a>
+	</span>
+	<span>
+		<a class="Link" href="index.php"> Home |</a>
+	</span>
+	<span>
+		<a class="Link" href="recent.php"> Recent </a>
+	</span>
 </div>
 
 </html>
