@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 // Pretend i'm looking this up in a database
 require "./data/Dao.php";
 // require_once "Klogger.php";

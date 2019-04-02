@@ -5,12 +5,11 @@
 
 }
 
-.SearchBox {
+.Search { /*TODO abstract this brother */
+	background-color: #ffe699;
 	border: 2px solid;
 	border-radius: 5px;
 	border-color: #cc9900;
-	background-color: #ffe699;
-	height: 20px;
 }
 
 .SearchButton {

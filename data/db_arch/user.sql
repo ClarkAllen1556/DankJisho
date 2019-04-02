@@ -17,6 +17,8 @@ values("test2@test.com", "2tester", "dank");
 
 select * from Users;
 
-alter table Users 
-add column DateRegistered  DATETIME default CURRENT_TIMESTAMP 
+alter table Users
+add column NumPosts  int default 0
 after Password;
+
+update Users set NumPosts = NumPosts + 1;

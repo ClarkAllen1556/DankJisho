@@ -23,7 +23,7 @@ session_start();
 	</div>
 	<div id="Search">
 		<form method='get' action="search.php">
-			<input class='SearchBox' type='text' id='search' name='search' placeholder='New search...''> <!-- TODO This image is not resizing-->
+			<input class='Search' class='Box' type='text' id='search' name='search' placeholder='New search...''> <!-- TODO This image is not resizing-->
 			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png"> </i> --> </button>
 		</form>
 		<?php
@@ -36,13 +36,13 @@ session_start();
 </header>
 
 <body>
-	<div class="Row">
-		<div class="Column" id="Recent_Col">
-			<img class="TextImage" src="icons/recent_search_icon.png"> <a class="Link" href="recent.php"><h3> Recent </h3></a>
+	<div class='Row'>
+		<div class='Column' id='Recent_Col'>
+			<img class='TextImage' src='icons/recent_search_icon.png'> <a class='Link' href='recent.php'><h3> Recent </h3></a>
 		</div>
-		<div class="Column" id="Forum_Col">
-			<!-- <span><a href="test.php"> testing link</a></span> -->
-			<img class="TextImage" src="icons/forum_icon.png"> <a class="Link" href="forum.php"> Forums </a>
+		<div class='Column' id='Forum_Col'>
+			<!-- <span><a href='test.php'> testing link</a></span> -->
+			<img class='TextImage' src='icons/forum_icon.png'> <a class='Link' href='forum.php'> Forums </a>
 			<?php
 			include "./_handle_forum.php";
 
@@ -52,7 +52,7 @@ session_start();
 			echo "<td><h4> Title </h4></td>" . "<td><h4> Author </h4></td>" . "<td><h4> Posted </h4></td>";
 			foreach ($listings as $post) {
 				echo "<tr><td>"
-				. "<a href=\"./forum_comments.php\">" . htmlspecialchars($post['Title']) . "<\a>"
+				. "<a href=\"./forum_comments.php\">" . htmlspecialchars($post['Title'])
 				. "<td>" . htmlspecialchars($post['Author'])
 					. "</td><td> {$post['Posted']} </td></tr>";
 			}

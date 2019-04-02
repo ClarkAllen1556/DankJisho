@@ -16,11 +16,11 @@ session_start();
 <header>
 	<div id='Title'>
 		<span class='UpTitleIcons'> <img src='icons/logo_cute.png'> </span>
-		<h1><span class='UpTitle'> <a class='NamedLink' href='index.php'>Dank Forum </a> </span></h1>
+		<h1><span class='UpTitle'> <a class='NamedLink' href='forum.php'>Dank Forum </a> </span></h1>
 	</div>
 	<div id='Search'>
 		<form method='get' action='search.php'>
-			<input class='SearchBox' type='text' name='search' placeholder='New search...'> <!-- TODO This image is not resizing-->
+			<input class='Search' class='Box' type='text' name='search' placeholder='New search...'> <!-- TODO This image is not resizing-->
 			<button type='submit' class=''> <i class='SearchButton'> Search...<!-- <img class='TextImage' src='icons/searchbox_icon.png'> </i> --> </button>
 		</form>
 		<?php

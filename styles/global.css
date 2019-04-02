@@ -19,7 +19,10 @@ h2 {
 textarea {
 	resize: vertical;
 	height: 250px;
-	width: 500px;
+	width: 450px;
+	margin: 10px;
+	font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+	color: #404040;
 }
 
 .TextImage {
@@ -38,4 +41,10 @@ textarea {
 	border-color: #cc9900;
 	background-color: #ffe699;
 	height: 20px;
+}
+
+.Box {
+	border: 2px solid;
+	border-radius: 5px;
+	border-color: #cc9900;
 }
