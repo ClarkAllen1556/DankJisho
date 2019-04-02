@@ -6,14 +6,18 @@ use DankJisho;
 
 CREATE TABLE Users (
     ID INT NOT NULL AUTO_INCREMENT,
-    Email VARCHAR(256) NOT NULL UNIQUE,
-    UserName VARCHAR(256) NOT NULL UNIQUE,
-    Password VARCHAR(64) NOT NULL,
+    Email VARCHAR(255) CHARACTER SET utf8 NOT NULL UNIQUE,
+    UserName VARCHAR(256) CHARACTER SET utf8 NOT NULL UNIQUE,
+    Password VARCHAR(64) CHARACTER SET utf8 NOT NULL ,
     PRIMARY KEY(ID)
- );
+);
+
+SHOW FULL COLUMNS FROM junk;
 
 insert into Users(Email, UserName, Password)
-values("test2@test.com", "2tester", "dank");
+values
+("nathan.drake@halo.org", "TreasureHunt", "dank"),
+("all.might@hero.org", "AllMight", "dank");
 
 select * from Users;
 

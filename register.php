@@ -30,21 +30,21 @@ session_start();
 <body>
 	<h2> Register for a new account </h2>
 	<div id="Register">
-		<form method="post" action="handler.php">
-			<div>Email: <input class="EntryBox" type="text" name="Email" placeholder="dank.boi@coolpeeps.edu"></div>
-			<div>Username: <input class="EntryBox" value="<?php echo isset($_SESSION['form_input']['username']) ? $_SESSION['form_input']['username'] : ''; ?>"
-				type="text" id="username" name="username"></div>
-			<div>Password: <input class="EntryBox" type="password" name="password"></div>
-			<div>Confirm password: <input class="EntryBox" type="password" name="password"></div>
+		<form method="post" action="_handle_registration.php">
+			<div>Email: <input class="EntryBox" type="text" name="email" placeholder="dank.boi@coolpeeps.edu"></div>
+			<div>Username: <input class="EntryBox" type="text" id="username" name="username"></div>
+			<div>Password: <input class="EntryBox" type="password" name="password1"></div>
+			<div>Confirm password: <input class="EntryBox" type="password" name="password2"></div>
 			<div><input type="submit" value="Register"></div>
 			<?php
 			if (isset($_SESSION['messages'])) {
 				foreach ($_SESSION['messages'] as $message) {
-					echo "<div class='message bad'>{$message}</div>";
+					echo "<div>{$message}</div>";
 				}
 			}
-			unset($_SESSION['message']);
-			unset($_SESSION['form_input']);
+			session_unset(); // doesn't reset unless i do the whole thing TODO
+			// unset($_SESSION['message']);
+			// unset($_SESSION['form_input']);
 			?>
 		</form>
 	</div>
