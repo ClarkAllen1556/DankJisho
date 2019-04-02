@@ -1,9 +1,13 @@
 <?php
 class Dao {
-	private $host = "localhost";
-	private $db = "DankJisho";
-	private $user = "root";
-	private $pass = "";
+	// private $host = "localhost";
+	// private $db = "DankJisho";
+	// private $user = "root";
+	// private $pass = "";
+	private $host = "us-cdbr-iron-east-03.cleardb.net";
+	private $db = "heroku_fa88da99bce845a";
+	private $user = "bc87e0e90c4511";
+	private $pass = "2cf8e6ec";
 
 	//   protected $logger;
 
