@@ -25,7 +25,7 @@ session_start();
 		</form>
 		<?php
 		if(isset($_SESSION["logged_in"]))
-			echo "<span> <a class='Link' href='userpage.php'>" . $_SESSION['username'] . "</a> <a class='Link' href='_handle_logout.php'>Logout...</a></span>";
+			echo "<span> <a class='Link' href='userpage.php'>" . htmlspecialchars($_SESSION['username']) . "</a> <a class='Link' href='_handle_logout.php'>Logout...</a></span>";
 		else
 			echo "<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='register.php'>Register</a></span>";
 		?>
@@ -37,7 +37,7 @@ session_start();
 	require_once "_handle_search.php";
 	parseJishoJson();
 	?>
-	<h2><a class="NamedLink" href=index.php><?php echo "Results for: \"" . $_SESSION['searchString'] . "\""?></a></h2>
+	<h2><?php echo "Results for: \"" . $_SESSION['searchString'] . "\""; ?></a></h2>
 	<div class="Row">
 		<div class="Column" id="Forum_Col">
 		<!-- <span><a href="test.php"> testing link</a></span> -->

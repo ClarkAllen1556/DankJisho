@@ -3,8 +3,11 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+// use TrueBV\Punycode;
+// $Punycode = new Punycode();
+
 $userSearch = $_GET['search'];
-$resultJSON = file_get_contents("http://beta.jisho.org/api/v1/search/words?keyword=$userSearch");
+$resultJSON = file_get_contents("http://beta.jisho.org/api/v1/search/words?keyword=" . urlencode($userSearch));
 $resultObj = json_decode($resultJSON);
 
 $_SESSION['searchString'] = $userSearch;
@@ -25,7 +28,8 @@ function parseJishoJson () {
 			$formattedString .= print_r( "<tr>", true);
 			$formattedString .= print_r( "<td>$entry->slug<br/>", true);
 			foreach ($entry->japanese as $readings => $reading) {
-				$formattedString .= print_r( "&nbsp&nbsp" . "($reading->reading)", true);
+				if(isset($reading->reading))
+					$formattedString .= print_r( "&nbsp&nbsp" . "($reading->reading)", true);
 			}
 			$formattedString .= print_r( "<br/>", true);
 			foreach ($entry->senses as $translations => $meaning) {
