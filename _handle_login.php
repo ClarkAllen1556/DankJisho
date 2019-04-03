@@ -31,8 +31,9 @@ if ($result->Password != $_POST["password"]) {
 	header("Location: login.php");
 	exit();
 } else {
-	$_SESSION['logged_in'] = true;
-	$_SESSION['username'] = $result->UserName;
+	$_SESSION["logged_in"] = true;
+	$_SESSION["username"] = $result->UserName;
+	$_SESSION["userID"] = $result->ID;
 
 	header("Location: login.php"); // TODO
 	// header('Location: ' . $_SERVER['HTTP_REFERER']); // TODO this does not work it seems

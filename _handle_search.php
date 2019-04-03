@@ -17,16 +17,15 @@ function parseJishoJson () {
 	global $userSearch, $resultJSON, $resultObj;
 
 	$formattedString = "";
-
 	if (count($resultObj->data)) {
 		$formattedString .= print_r( "<table>", true);
 		// Cycle through the JSON object
 		$i = 0;
 		foreach ($resultObj->data as $datas => $entry) {
-
 			// Output a row
 			$formattedString .= print_r( "<tr>", true);
 			$formattedString .= print_r( "<td>$entry->slug<br/>", true);
+
 			foreach ($entry->japanese as $readings => $reading) {
 				if(isset($reading->reading))
 					$formattedString .= print_r( "&nbsp&nbsp" . "($reading->reading)", true);
@@ -48,6 +47,12 @@ function parseJishoJson () {
 	}
 
 	$_SESSION["formattedString"] = $formattedString;
+
+	if(isset($_SESSION["logged_in"])) {
+		require_once "./_handle_recent.php";
+
+		addToRecent($userSearch);
+	}
 }
 
 function printParsedJishoJson() {
