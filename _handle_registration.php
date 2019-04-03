@@ -29,21 +29,30 @@ if ($password1 != $password2) {
 $dao = new Dao();
 $conn = $dao->getConnection();
 
-$query = "select * from Users where Email = '" . $email . "';";
-$result = $conn->query($query, PDO::FETCH_ASSOC);
+// $query = "select * from Users where Email = '" . $email . "';";
+// $result = $conn->query($query, PDO::FETCH_ASSOC);
 
-// if($result && !$email != NULL) {
+// if($result > 0) {
 // 	$messages[] = "This email address is already associated with an account";
 // 	$valid = false;
+
+// 	$result = 0;
 // }
 
 // $query = "select * from Users where UserName = '" . $username . "';";
 // $result = $conn->query($query, PDO::FETCH_ASSOC);
 
-// if($result && $username != NULL) {
-// 	$messages[] = "That username " . print_r($result) . " is already taken";
+// if($result > 0) {
+// 	$messages[] = "That username is " . $result->fetchObject() . $result. "already taken";
 // 	$valid = false;
+
+// 	$result = 0;
 // }
+
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	$messages[] = "Please enter a valid email address";
+	$valid = false;
+}
 
 if(!$valid) {
 	$_SESSION["messages"] = $messages;
