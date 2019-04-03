@@ -29,6 +29,7 @@ session_start();
 		else
 			echo "<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='register.php'>Register</a></span>";
 		?>
+		<span><a class='Link' href='index.php'> <img class='TextImage' src='icons/home_icon.png'> Home </a> </span>
 	</div>
 </header>
 

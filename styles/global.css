@@ -28,7 +28,9 @@ body {
 	margin-bottom: 100px;
 	clear: both;
 }
-
+span {
+	text-align: center;
+}
 .TextImage {
 	height: 20px;
 	width: 20px;

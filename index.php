@@ -14,9 +14,6 @@ session_start();
 	<link rel='icon' type='image/x-icon' href='favicon.ico' />
 </head>
 <header>
-	<div>
-		<span> <a id='Path' class='Link' href='index.php'> Home </a> </span>
-	</div>
 	<div id='Title'>
 		<span class='UpTitleIcons'> <img src='icons/logo_cute.png'> </span>
 		<h1><span class='UpTitle'> <a class='NamedLink' href='index.php'>Dank Jisho</a> </span></h1>
@@ -41,7 +38,7 @@ session_start();
 		</div>
 		<div class='Column' id='Forum_Col'>
 			<!-- <span><a href='test.php'> testing link</a></span> -->
-			<img class='TextImage' src='icons/forum_icon.png'> <a class='Link' href='forum.php'> Forums </a>
+			<span> <img class='TextImage' src='icons/forum_icon.png'> <a class='Link' href='forum.php'> Forums </a> </span>
 			<?php
 			include "./_handle_forum.php";
 

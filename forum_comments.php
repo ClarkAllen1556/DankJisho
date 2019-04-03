@@ -29,11 +29,13 @@ session_start();
 		else
 			echo "<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='register.php'>Register</a></span>";
 		?>
+		<span><a class='Link' href='index.php'> <img class='TextImage' src='icons/home_icon.png'> Home </a> </span>
 	</div>
 </header>
 
 <body>
-	<h2><a class="NamedLink" href=forum.php>[NAME_OF_POST]</a></h2>
+	<a class='NamedLink'> < Back to Forums </a>
+	<h2><a class="NamedLink">[NAME_OF_POST]</a></h2>
 	<div class="Row">
 		<div class="Column" id="Forum_Col">
 			<!-- <span><a href="test.php"> testing link</a></span> -->
@@ -47,7 +49,7 @@ session_start();
 			echo "<td><h4> Title </h4></td>". "<td><h4> Author </h4></td>" . "<td><h4> Posted </h4></td>";
 			foreach ($listings as $post) {
 				echo "<tr><td>"
-				. "<a href=\"http://www.google.com\">" . htmlspecialchars($post['Title'])
+				. "<a href=\"./forum_comments.php\">" . htmlspecialchars($post['Title'])
 				. "<td>" . htmlspecialchars($post['Author'])
 				. "</td><td> {$post['Posted']} </td></tr>";
 			}

@@ -23,7 +23,13 @@ session_start();
 			<input class='Search' class='Box' type='text' name='search' placeholder="New search..."> <!-- TODO This image is not resizing-->
 			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png"> </i> --> </button>
 		</form>
-		<span> <a class="Link"href="login.php">Login</a> <a class="Link" href="register.php">Register</a></span>
+		<?php
+		if(isset($_SESSION["logged_in"]))
+			echo "<span> <a class='Link' href='userpage.php'>" . $_SESSION['username'] . "</a> <a class='Link' href='_handle_logout.php'>Logout...</a></span>";
+		else
+			echo "<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='register.php'>Register</a></span>";
+		?>
+		<span><a class='Link' href='index.php'> <img class='TextImage' src='icons/home_icon.png'> Home </a> </span>
 	</div>
 </header>
 
