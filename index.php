@@ -38,7 +38,7 @@ session_start();
 		</div>
 		<div class='Column' id='Forum_Col'>
 			<!-- <span><a href='test.php'> testing link</a></span> -->
-			<span> <img class='TextImage' src='icons/forum_icon.png'> <a class='Link' href='forum.php'> Forums </a> </span>
+			<span><a class="Link" href="forum.php"> <img class="TextImage" src="icons/forum_icon.png"> Forums </a></span>
 			<?php
 			include "./_handle_forum.php";
 

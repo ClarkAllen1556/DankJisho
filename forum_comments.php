@@ -34,12 +34,11 @@ session_start();
 </header>
 
 <body>
-	<a class='NamedLink'> < Back to Forums </a>
 	<h2><a class="NamedLink">[NAME_OF_POST]</a></h2>
 	<div class="Row">
 		<div class="Column" id="Forum_Col">
 			<!-- <span><a href="test.php"> testing link</a></span> -->
-			<img class="TextImage" src="icons/forum_icon.png"> <a class="Link" href="forum.php"> Forums </a>
+			<a class="Link" href="forum.php"> <img class="TextImage" src="icons/forum_icon.png"> &#8701 Back to Forums </a>
 			<?php
 			include "./_handle_forum.php";
 
