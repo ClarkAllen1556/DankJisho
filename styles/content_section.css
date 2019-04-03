@@ -12,7 +12,8 @@
 }
 
 #Recent_Col {
-	width: 500px;
+	width: 300px;
+	word-wrap: normal;
 }
 
 #Forum_Col {
@@ -46,13 +47,23 @@
 	margin-left: auto;
 	margin-right: auto;
 	align-content: space-around;
+
 }
+/*
+Body {
+	text-align: center;
+	width: 700px;
+} */
 
 .Column {
 	/* flex: 50%; */
-	/* position: relative; */
+	/* position: relative;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; */
+	float: left;
+
+	margin: 5px;
+	display: inline;
 	background-color: #ffe699;
 	border: 2px solid;
 	border-radius: 5px;

@@ -33,23 +33,26 @@ session_start();
 </header>
 <body>
 	<div class='Row'>
-		<div class='Column' id='Recent_Col'>
+		<span class='Column' id='Recent_Col'>
 			<span><a class='Link' href='recent.php'><h3><img class='TextImage' src='icons/recent_search_icon.png'> Recent </h3></a></span>
 			<?php
 			include "./_handle_recent.php";
+			if(isset($_SESSION["logged_in"])) {
+				$recents = getRecentSearches();
 
-			$recents = getRecentSearches();
-
-			echo "<table id='listings'>";
-			echo "<td><h4> Word </h4></td>" . "<td><h4> Date Searched </h4></td>";
-			foreach ($recents as $entry) {
-				echo "<tr><td>" . htmlspecialchars($entry['Query'])
-				. "</td><td> {$entry['SearchTime']} </td></tr>";
+				echo "<table id='listings'>";
+				echo "<td><h4> Word </h4></td>" . "<td><h4> Date Searched </h4></td>";
+				foreach ($recents as $entry) {
+					echo "<tr><td>" . htmlspecialchars($entry['Query'])
+					. "</td><td> {$entry['SearchTime']} </td></tr>";
+				}
+				echo "</table>";
+			} else {
+				echo "No recent searches.";
 			}
-			echo "</table>";
 			?>
-		</div>
-		<div class='Column' id='Forum_Col'>
+		</span>
+		<span class='Column' id='Forum_Col'>
 			<!-- <span><a href='test.php'> testing link</a></span> -->
 			<span><a class="Link" href="forum.php"> <img class="TextImage" src="icons/forum_icon.png"> Forums </a></span>
 			<?php
@@ -67,7 +70,7 @@ session_start();
 			}
 			echo "</table>";
 			?>
-		</div>
+		</span>
 	</div>
 </body>
 <div id="Footer">
