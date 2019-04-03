@@ -24,6 +24,11 @@ button {
 	border-radius: 5px;
 }
 
+body {
+	margin-bottom: 100px;
+	clear: both;
+}
+
 .TextImage {
 	height: 20px;
 	width: 20px;
