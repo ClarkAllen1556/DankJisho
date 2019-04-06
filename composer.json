@@ -1,5 +1,4 @@
 {
     "require": {
-        "true/punycode": "~2.0"
     }
 }

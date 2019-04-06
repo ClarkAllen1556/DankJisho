@@ -16,9 +16,6 @@ function getForumListings() {
 		Users on ForumPosts.UserID = Users.ID
 	order by SubmissionTime desc;";
 
-	// print_r($query);
-	// $filler = $conn->query($query); //, SubmissionTime  from Comments order by SubmissionTime desc", PDO::FETCH_ASSOC);  }
-	// print_r($filler->fetchAll());
 	return $conn->query($query, PDO::FETCH_ASSOC); //, SubmissionTime  from Comments order by SubmissionTime desc", PDO::FETCH_ASSOC);  }
 }
 
