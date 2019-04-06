@@ -23,10 +23,9 @@ if($userEmail == NULL || $pass == NULL) {
 
 $query = "select * from Users where Email = '$userEmail' and Password = '$pass';" ;
 
-$password_in_the_database = "abc123";
 $result = ($conn->query($query, PDO::FETCH_ASSOC))->fetchObject();
 
-if ($result->Password != $_POST["password"]) {
+if ($result->Password != $pass) {
 	$_SESSION['message'] = "Error, the password or password was incorrect.";
 	header("Location: login.php");
 	exit();

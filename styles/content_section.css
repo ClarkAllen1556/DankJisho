@@ -26,15 +26,15 @@
 	align-content: center;
 }
 
-#TextBlob {
+/* #TextBlob {
 	/* display: flex; */
 	justify-content: center;
 	align-content: center;
 	background-color: #ffe699;
 	border-radius: 5px;
 	border-color: #cc9900;
-	flex: 50%;
-}
+	/* flex: 50%; */
+} */
 
 #PostTitle {
 	margin: 10px;

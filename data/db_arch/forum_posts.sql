@@ -10,6 +10,15 @@ CREATE TABLE ForumPosts (
     PRIMARY KEY (ID)
 );
 
+CREATE TABLE RecentSearches (
+    ID INT NOT NULL AUTO_INCREMENT,
+    UserID INT,
+    FOREIGN KEY (UserID) REFERENCES Users(ID),
+    Query VARCHAR(1024) CHARACTER SET utf8 NOT NULL,
+    SearchedTime DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (ID)
+);
+
 select * from ForumPosts;
 use DankJisho;
 insert into ForumPosts(UserID, Title, Post)
