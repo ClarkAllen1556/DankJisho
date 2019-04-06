@@ -6,15 +6,22 @@ if (session_status() == PHP_SESSION_NONE) {
 ?>
 
 <html>
-<head>
-	<link rel="stylesheet" href="styles/global.css">
-</head>
-<header>
-	<h1>
-		User page
-	</h1>
-</header>
+
+<!-- HEADER -->
+<?php
+include "./elements/element_header.php";
+?>
+<!--  -->
+
 <body>
+	<h2>
+		<?php
+		if(isset($_SESSION["logged_in"]))
+			echo "Welcome to your page, " . $_SESSION["username"] . "!";
+		else
+			header("Location: login.php"); // Redirect if user is not logged in
+		?>
+	</h2>
 	<p>
 		Page coming soon...
 	</p>
@@ -22,4 +29,11 @@ if (session_status() == PHP_SESSION_NONE) {
 		<a class='Link' href='./index.php'> < Back to DankJisho </a>
 	</p>
 </body>
+
+<!-- FOOTER -->
+<?php
+include_once "./elements/element_footer.html";
+?>
+<!--  -->
+
 </html>

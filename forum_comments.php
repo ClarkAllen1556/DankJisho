@@ -65,19 +65,11 @@ session_start();
 		</div>
 	</div>
 </body>
-<div id="Footer">
-	<span>
-		<a class="Link" href="about.php"> About |</a>
-	</span>
-	<span>
-		<a class="Link" href="forum.php"> Forum |</a>
-	</span>
-	<span>
-		<a class="Link" href="index.php"> Home |</a>
-	</span>
-	<span>
-		<a class="Link" href="recent.php"> Recent </a>
-	</span>
-</div>
+
+<!-- FOOTER -->
+<?php
+include "./elements/element_footer.html";
+?>
+<!--  -->
 
 </html>
