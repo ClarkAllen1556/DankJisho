@@ -17,13 +17,13 @@ session_start();
 </head>
 <header>
 	<div id="Title">
-		<span class="UpTitleIcons"> <img src="icons/logo_cute.png"> </span>
+		<span class="UpTitleIcons"> <img src="icons/logo_cute.png" alt="Logo"> </span>
 		<h1><span class="UpTitle"> <a class="NamedLink" href="index.php">Dank Jisho </a> </span></h1>
 	</div>
 	<div id="Search">
 		<form method='get' action="search.php">
-			<input class='Search' class='Box' type="text" name="search" placeholder="New search..."> <!-- TODO This image is not resizing-->
-			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png"> </i> --> </button>
+			<input class='Search Box' type="text" name="search" placeholder="New search..."> <!-- TODO This image is not resizing-->
+			<button type="submit" class=""> <i class="SearchButton"> Search...<!-- <img class="TextImage" src="icons/searchbox_icon.png">--> </i></button>
 		</form>
 		<?php
 		if(isset($_SESSION["logged_in"]))
@@ -47,6 +47,9 @@ session_start();
 				<a href='https://github.com/ClarkAllen1556/DankJisho'>Dank Jisho: GitHub</a>
 				<a href='https://github.com/ClarkAllen1556'>GitHub</a>
 				<a rel="me" href='https://toot.cafe/@The_A_C'>Mastodon</a>
+				<a href="https://dev.to/allen1556">
+					<img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Allen's DEV Profile" height="30" width="30" />
+				</a>
 			</p>
 		</p>
 	</div>
