@@ -43,14 +43,14 @@ session_start();
 		</p>
 		<p>
 			Links to my things:
-			<p>
-				<a href='https://github.com/ClarkAllen1556/DankJisho'>Dank Jisho: GitHub</a>
-				<a href='https://github.com/ClarkAllen1556'>GitHub</a>
-				<a rel="me" href='https://toot.cafe/@The_A_C'>Mastodon</a>
-				<a href="https://dev.to/allen1556">
-					<img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Allen's DEV Profile" height="30" width="30" />
-				</a>
-			</p>
+		</p>
+		<p>
+			<a href='https://github.com/ClarkAllen1556/DankJisho'>Dank Jisho: GitHub</a>
+			<a href='https://github.com/ClarkAllen1556'>GitHub</a>
+			<a rel="me" href='https://toot.cafe/@The_A_C'>Mastodon</a>
+			<a href="https://dev.to/allen1556">
+				<img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Allen's DEV Profile" height="30" width="30" />
+			</a>
 		</p>
 	</div>
 </body>
