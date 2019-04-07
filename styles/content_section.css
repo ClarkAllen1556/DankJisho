@@ -17,7 +17,7 @@
 }
 
 #Forum_Col {
-	width: 500px; /*TODO make this better */
+	width: 600px; /*TODO make this better */
 }
 
 #Register {
@@ -41,8 +41,8 @@
 }
 
 .Row {
-	/* display: flex; */
-	/* justify-content: center; */
+	display: flex;
+	justify-content: center;
 	/* align-items: flex-start; */
 	margin-left: auto;
 	margin-right: auto;

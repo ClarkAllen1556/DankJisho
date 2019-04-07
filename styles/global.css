@@ -41,6 +41,10 @@ tr {
 	border-bottom: 1px solid black;
 }
 
+table {
+	margin: auto;
+}
+
 .NamedLink {
 	text-decoration: none;
 	color: inherit; /* makes not change color on click */
