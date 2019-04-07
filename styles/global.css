@@ -44,6 +44,9 @@ tr {
 
 tr:hover {
 	background:#71c2f4;
+	/* border: 5px solid;
+	border-radius: 5px;
+	border-color: #2aa3ef; */
 }
 
 table {

@@ -13,9 +13,14 @@ include "./elements/element_header.php";
 <body>
 	<?php
 	require_once "_handle_search.php";
+
+	if(isset($_GET['recent_search'])) {
+		$_SESSION['searchString'] = $_GET['recent_search'];
+	}
+
 	parseJishoJson();
 	?>
-	<h2><?php echo "Results for: \"" . $_SESSION['searchString'] . "\""; ?></a></h2>
+	<h2><?php echo "Results for: \"" . $_SESSION['searchString']. "\""; ?></a></h2>
 	<div class="Row">
 		<div class="Column" id="Forum_Col">
 		<!-- <span><a href="test.php"> testing link</a></span> -->
