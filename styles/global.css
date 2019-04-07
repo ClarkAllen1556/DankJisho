@@ -1,5 +1,6 @@
 html {
-	font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+	/* font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'; */
+    font-family: 'Noto Sans SC', sans-serif;
 	font-size: 18px;
 	color: #404040;
 }
@@ -39,6 +40,10 @@ span {
 
 tr {
 	border-bottom: 1px solid black;
+}
+
+tr:hover {
+	background:#cc9900;
 }
 
 table {

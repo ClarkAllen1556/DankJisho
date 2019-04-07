@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="styles/footer_section.css">
 	<link rel="stylesheet" href="styles/register_section.css">
 	<link rel='icon' type='image/x-icon' href='favicon.ico' />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:500&amp;subset=japanese" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <header>
 	<div id="Title">

@@ -8,6 +8,7 @@ function getForumListings() {
 
 	$conn = $dao->getConnection();
 	$query = "select
+		ForumPosts.ID,
 		Title,
 		Users.Username as Author,
 		SubmissionTime as Posted
