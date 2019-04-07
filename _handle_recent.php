@@ -25,7 +25,7 @@ function getRecentSearches() {
 	// $query = "select ID from Users where UserName = '" . $_SESSION["username"] . "';";
 	// $result = $conn->query($query, PDO::FETCH_ASSOC);
 	// $userID = $result->fetchObject();
-	$query = "select * from RecentSearches where UserID = '" . $_SESSION["userID"] . "';";
+	$query = "select * from RecentSearches where UserID = '" . $_SESSION["userID"] . "' order by SearchTime desc;";
 	return $conn->query($query, PDO::FETCH_ASSOC);
 }
 ?>
