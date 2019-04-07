@@ -18,6 +18,12 @@ include "./elements/element_header.php";
 			This website is made by <span title='I really like curry'>Allen Clark</span> of Boise State University. More content is on the way...
 		</p>
 		<p>
+			Jisho is the Japanese word for "dictionary". Dank is the English word for "the very best" or "of the highest quality".
+			By combining these words together the basic idea of DankJisho can be understood. The goal of DankJisho is to create an
+			lightweight online Japanese-English/English-Japanese dictionary where users can create and update lists and collections
+			as they search for words.
+		</p>
+		<p>
 			Links to my things:
 		</p>
 		<p>
