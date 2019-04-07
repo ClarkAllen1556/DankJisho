@@ -11,7 +11,6 @@ include "./elements/element_header.php";
 <!--  -->
 
 <script language='javascript'>
-
 function setPageTitle (postInfo) {
 	if(postInfo) {
 		$('#PostTitle').text(postInfo.title);
@@ -38,7 +37,6 @@ window.onload = () => {
 	setPageTitle(postInfo);
 	fetchPostContents(postInfo);
 }
-
 </script>
 
 <body>
