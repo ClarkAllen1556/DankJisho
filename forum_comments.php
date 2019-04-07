@@ -10,8 +10,30 @@ include "./elements/element_header.php";
 ?>
 <!--  -->
 
+<script language='javascript'>
+
+function setPageTitle (postInfo) {
+	if(postInfo) {
+		$('#PostTitle').text(postInfo.title);
+		console.log(postInfo.title)
+	}
+}
+
+function fetchPostContents (postInfo) {
+	const ID = postInfo.id;
+
+
+}
+
+window.onload = () => {
+	const postInfo = JSON.parse(sessionStorage.getItem('postInfo'));
+	setPageTitle(postInfo);
+}
+
+</script>
+
 <body>
-	<h2><a class='NamedLink'>[NAME_OF_POST]</a></h2>
+	<h2><a class='NamedLink' id='PostTitle'>[NAME_OF_POST]</a></h2>
 	<div class='Row'>
 		<div class='Column' id='Forum_Col'>
 			<!-- <span><a href='test.php'> testing link</a></span> -->

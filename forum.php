@@ -14,10 +14,17 @@ include "./elements/element_header.php";
 window.onload = () => {
 	// get selected row
 	$("#listings").on("click", "tr", function (e) {
-		const postTitle = $(e.currentTarget).find("td:eq(0)").text();
-		const postAuthor = $(e.currentTarget).find("td:eq(1)").text()
-		const postID = $(e.currentTarget).find("td:eq(3)").text();
-		console.log(postTitle + " " + postAuthor + " " + postID);
+
+		const postInfo = {
+			title: $(e.currentTarget).find("td:eq(0)").text(),
+			author: $(e.currentTarget).find("td:eq(1)").text(),
+			id: $(e.currentTarget).find("td:eq(3)").text()
+		}
+
+		sessionStorage.setItem('postInfo', JSON.stringify(postInfo));
+		console.log(sessionStorage.getItem('postInfo'))
+
+		window.location.href = './forum_comments.php'
 	})
 }
 </script>
