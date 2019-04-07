@@ -23,7 +23,7 @@
 		</form>
 		<?php
 		if(isset($_SESSION["logged_in"]))
-			echo "<span> <a class='Link' href='userpage.php'>" . htmlspecialchars($_SESSION['username']) . "</a> <a class='Link' href='_handle_logout.php'>Logout...</a></span>";
+			echo " <span> <a class='Link' href='userpage.php'> " . htmlspecialchars($_SESSION['username']) . "</a> <a class='Link' href='_handle_logout.php'>Logout...</a></span>";
 		else
 			echo "<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='register.php'>Register</a></span>";
 		?>

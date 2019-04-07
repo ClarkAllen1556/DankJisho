@@ -49,7 +49,7 @@ function addForumPost() {
 	$query = "update Users set NumPosts = NumPosts + 1 where UserName = '" . $user->UserName . "'";
 	$queryResult = $conn->query($query, PDO::FETCH_ASSOC);
 
-	session_unset(); // TODO fix the reposting problem
+	// session_unset(); // TODO fix the reposting problem
 }
 
 if (isset($_POST["userForumPost"]) && !ctype_space($_POST["userForumPost"]) && $_POST["userForumPost"] != "") {
