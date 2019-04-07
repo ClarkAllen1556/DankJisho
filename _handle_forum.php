@@ -2,6 +2,22 @@
 require_once './data/Dao.php';
 // require_once(realpath($_SERVER["DOCUMENT_ROOT"]) .'/../Dao.php');
 
+if(isset($_GET["post_id"])) {
+	getForumPostContents($_GET["post_id"]);
+}
+
+function getForumPostContents($postID) {
+	$dao = new Dao();
+	// echo ">>>>> getForumListings {$dao}";
+
+	$conn = $dao->getConnection();
+	$query = "select Post from ForumPosts where ID ='" . $postID . "';";
+
+	$result = $conn->query($query, PDO::FETCH_ASSOC)->fetchObject();
+
+	echo htmlspecialchars($result->Post);
+}
+
 function getForumListings() {
 	$dao = new Dao();
 	// echo ">>>>> getForumListings {$dao}";

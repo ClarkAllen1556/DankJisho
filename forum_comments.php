@@ -15,19 +15,28 @@ include "./elements/element_header.php";
 function setPageTitle (postInfo) {
 	if(postInfo) {
 		$('#PostTitle').text(postInfo.title);
-		console.log(postInfo.title)
+		console.log(postInfo.title);
 	}
 }
 
 function fetchPostContents (postInfo) {
 	const ID = postInfo.id;
 
-
+	$.ajax({
+		url: './_handle_forum.php',
+		data: { post_id: ID },
+		type: 'get',
+		success: (resp) => {
+			$('#PostContents').text(resp);
+			console.log("server response: " + resp);
+		}
+	});
 }
 
 window.onload = () => {
 	const postInfo = JSON.parse(sessionStorage.getItem('postInfo'));
 	setPageTitle(postInfo);
+	fetchPostContents(postInfo);
 }
 
 </script>
@@ -38,28 +47,7 @@ window.onload = () => {
 		<div class='Column' id='Forum_Col'>
 			<!-- <span><a href='test.php'> testing link</a></span> -->
 			<a class='Link' href='forum.php'> <img class='TextImage' src='icons/forum_icon.png'> &#8701 Back to Forums </a>
-			<?php
-			include "./_handle_forum.php";
-
-			$listings = getForumListings();
-
-			echo "<table id='listings'>";
-			echo "<td><h4> Title </h4></td>". "<td><h4> Author </h4></td>" . "<td><h4> Posted </h4></td>";
-			foreach ($listings as $post) {
-				echo "<tr><td>"
-				. htmlspecialchars($post['Title'])
-				. "<td>" . htmlspecialchars($post['Author'])
-				. "</td><td> {$post['Posted']} </td></tr>";
-			}
-			echo "</table>";
-			if (isset($_SESSION['logged_in'])) {
-			?>
-				<form method='post' action='./new_forum_post.php'>
-					<button type='button id='NewPost' value='NewPost' name='newpost' href='./new_forum_post.php'> New Post </button>
-				</form>
-			<?php
-			}
-			?>
+			<blockquote id='PostContents'> [POST_CONTENTS] </blockquote>
 		</div>
 		</div>
 	</div>
