@@ -39,7 +39,7 @@ class Dao {
 	// echo "got here";
 	// $filler = $conn->query("select Title from ForumPosts;");
 	// print_r($filler->fetch()['Title']);
-	return $conn->query("select Title, SubmissionTime from ForumPosts order by SubmissionTime desc;", PDO::FETCH_ASSOC); //, SubmissionTime  from Comments order by SubmissionTime desc", PDO::FETCH_ASSOC);
+	return $conn->query("select Title, SubmissionTime from ForumPosts order by SubmissionTime desc;", PDO::FETCH_ASSOC);
 	}
 
 	public function getUser ($userName) {

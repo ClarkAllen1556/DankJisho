@@ -43,9 +43,9 @@ include "./elements/element_header.php";
 			echo "<td><h4> Title </h4></td>" . "<td><h4> Author </h4></td>" . "<td><h4> Posted </h4></td>";
 			foreach ($listings as $post) {
 				echo "<tr><td>"
-				. "<a href=\"./forum_comments.php\">" . htmlspecialchars($post['Title'])
-				. "<td>" . htmlspecialchars($post['Author'])
-				. "</td><td> {$post['Posted']} </td></tr>";
+				. htmlspecialchars($post['Title']) . "</td>"
+				. "<td>" . htmlspecialchars($post['Author']) . "</td>"
+				. "<td> {$post['Posted']} </td></tr>";
 			}
 			echo "</table>";
 			?>
