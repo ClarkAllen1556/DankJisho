@@ -26,7 +26,7 @@
 		<?php
 		if(isset($_SESSION["logged_in"]))
 			echo "<span> <a class='Link' href='_handle_logout.php' title='Logout'><img class='TextImage' src='icons/logout_icon.png'></a>"
-			. "<a class='Link' href='userpage.php' title='Account Page'> <img class='TextImage' src='icons/account_icon.png'> </a>" /*. htmlspecialchars($_SESSION['username'])*/ . "</a></span>";
+			. "<a class='Link' href='userpage.php' title='" . htmlspecialchars($_SESSION['username']) . "&#39;s Account Page'> <img class='TextImage' src='icons/account_icon.png'> </a>" /*. htmlspecialchars($_SESSION['username'])*/ . "</a></span>";
 		else
 			echo "<span> <a class='Link' href='login.php' title='Login to existing account'><img class='TextImage' src='icons/login_icon.png'></a>
 			<a class='Link' href='register.php' title='Register new account'><img class='TextImage' src='icons/register_icon.png'></a></span>";
