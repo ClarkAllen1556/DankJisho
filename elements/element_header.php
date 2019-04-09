@@ -2,7 +2,7 @@
 	Hold layout of the header that will appear across the site.
  -->
 <head>
-	<title>DankJisho</title>
+	<title>About - DankJisho</title>
 	<link rel="stylesheet" href="styles/title_section.css">
 	<link rel="stylesheet" href="styles/search_section.css">
 	<link rel="stylesheet" href="styles/content_section.css">
