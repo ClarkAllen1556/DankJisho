@@ -3,11 +3,19 @@ session_start();
 ?>
 <html>
 
+<head>
+	<?php
+	include "./sources/sources.html";
+	?>
+</head>
+
+<header>
 <!-- HEADER -->
 <?php
 include "./elements/element_header.php";
 ?>
 <!--  -->
+</header>
 
 <body>
 	<h2> Log into an existing account </h2>

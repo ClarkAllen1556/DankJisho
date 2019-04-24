@@ -4,6 +4,13 @@
 	align-content: center;
 }
 
+#Logo {
+	height: 105px;
+	width: 105px;
+	/* align-content: center; */
+	vertical-align: middle;
+}
+
 #Path {
 	display: flex;
 	justify-content: left;

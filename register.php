@@ -3,13 +3,27 @@ session_start();
 ?>
 <html>
 
+<head>
+	<?php
+	include "./sources/sources.html";
+	?>
+</head>
+
+<header>
 <!-- HEADER -->
 <?php
 include "./elements/element_header.php";
 ?>
 <!--  -->
+</header>
 
 <body>
+	<?php
+	if (isset($_SESSION['logged_in'])) {
+		$_SESSION['messages'] = 'You are already logged in, bro.';
+		header("Location: userpage.php"); // Redirect if user is not logged in
+	}
+	?>
 	<h2> Register for a new account </h2>
 	<div id='Register'>
 		<form method='post' action='_handle_registration.php'>

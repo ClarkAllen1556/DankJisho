@@ -7,19 +7,29 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <html>
 
+<head>
+	<?php
+	include "./sources/sources.html";
+	?>
+</head>
+
+<header>
 <!-- HEADER -->
 <?php
 include "./elements/element_header.php";
 ?>
 <!--  -->
+</header>
 
 <body>
 	<h2>
 		<?php
 		if(isset($_SESSION["logged_in"]))
 			echo "Welcome to your page, " . $_SESSION["username"] . "!";
-		else
+		else {
+			$_SESSION["message"] = "Sorry, please login to view your user page";
 			header("Location: login.php"); // Redirect if user is not logged in
+		}
 		?>
 	</h2>
 	<p>
