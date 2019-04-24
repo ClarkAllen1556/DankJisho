@@ -11,6 +11,7 @@ include "./elements/element_header.php";
 ?>
 <!--  -->
 
+
 <script language="javascript">
 	window.onload = function () {
 		console.log("hello world");
@@ -26,6 +27,24 @@ include "./elements/element_header.php";
 
 			$('#textarea_feedback').html(text_remaining + ' characters remaining');
 		});
+
+
+		$('#submit').submit(function(e) {
+			console.log("dankboi")
+			e.preventDefault();
+
+			// information to be sent to the server
+			var info = $('#userForumPost').val();
+			// alert(info);
+			console.log(info)
+
+
+			$.ajax({
+				type: "POST",
+				url: './handler/_post_forum.php',
+				data: {foo: info}
+			});
+		});
 	});
 </script>
 
@@ -34,7 +53,7 @@ include "./elements/element_header.php";
 	<div class='Row'>
 		<div class='Column' id='Forum_Col'>
 		<img class='TextImage' src='icons/forum_icon.png'> <a class='Link' href='forum.php'> Forums </a>
-			<form id='NewPost' method='post' action='./forum_comments.php'>
+			<form id='NewPost' method='post'>
 				<?php
 				include "./_handle_forum.php";
 				?>
@@ -44,11 +63,11 @@ include "./elements/element_header.php";
 				<?php
 				if (isset($_SESSION['logged_in'])) {
 				?>
-					<button type='button id='NewPost' value='Submit' name='submit' href='./new_forum_post.php'> Submit </button>
+					<button type='submit' id='submit' value='Submit' name='submit'> Submit </button>
 				<?php
 				} else {
 				?>
-					<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='register.php'>Register</a></span>
+					<span> <a class='Link' href='login.php'>Login</a> <a class='Link' href='./register.php'>Register</a></span>
 				<?php
 				}
 				?>

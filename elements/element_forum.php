@@ -1,8 +1,21 @@
 <div class="Column" id="Forum_Col">
 	<!-- <span><a href="test.php"> testing link</a></span> -->
-	<span><a class="Link" href="forum.php"> <img class="TextImage" src="icons/forum_icon.png"> Forums </a></span>
+	<div>
+		<span><a class="Link" href="forum.php"> <img class="TextImage" src="icons/forum_icon.png"> Forums </a></span>
+		<span style="float: right">
+		<?php
+		include "./_handle_forum.php";
+		if (isset($_SESSION['logged_in'])) {
+		?>
+			<form method='post' action='./new_forum_post.php'>
+				<button type='button id='NewPost' value='NewPost' name='newpost' href='./new_forum_post.php'> New Post </button>
+			</form>
+		<?php
+		}
+		?>
+		</span>
+	</div>
 	<?php
-	include "./_handle_forum.php";
 
 	$listings = getForumListings();
 	// print_r($listings);
@@ -17,13 +30,5 @@
 		. "<td style='display: none;'>" . $post['ID'] . "</td></tr>";
 	}
 	echo "</table>";
-
-	if (isset($_SESSION['logged_in'])) {
-	?>
-		<form method='post' action='./new_forum_post.php'>
-			<button type='button id='NewPost' value='NewPost' name='newpost' href='./new_forum_post.php'> New Post </button>
-		</form>
-	<?php
-	}
 	?>
 </div>

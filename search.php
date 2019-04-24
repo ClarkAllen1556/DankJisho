@@ -28,6 +28,8 @@ include "./elements/element_header.php";
 		<?php
 		require_once "_handle_search.php";
 		printParsedJishoJson();
+		unset($_SESSION['searchString']);
+		unset($_SESSION['formattedString']);
 		?>
 		</div>
 	</div>
