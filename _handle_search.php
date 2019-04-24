@@ -3,10 +3,14 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// use TrueBV\Punycode;
-// $Punycode = new Punycode();
+if(isset($_GET["recent"]))
+	$userSearch = $_GET["recent"];
+elseif(trim($_GET["search"]) == "") {
+	header("Location: index.php");
+	exit;
+} elseif(isset($_GET["search"]))
+	$userSearch = $_GET["search"];
 
-$userSearch = $_GET['search'];
 $resultJSON = file_get_contents("http://beta.jisho.org/api/v1/search/words?keyword=" . urlencode($userSearch));
 $resultObj = json_decode($resultJSON);
 
