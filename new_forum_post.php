@@ -61,7 +61,7 @@ include "./elements/element_header.php";
 		<img class='TextImage' src='icons/forum_icon.png'> <a class='Link' href='forum.php'> Forums </a>
 			<form id='NewPost' method='post'>
 				<?php
-				include "./_handle_forum.php";
+				include "./_handle_forum.php"; // if this is commented it doesnt work
 				?>
 				<input class='Box' id='PostTitle' type='text' name='postTitle' placeholder='Post title...'>
 				<textarea id='userForumPost' class='Box'  name='userForumPost' placeholder='What is on your mind bros?'></textarea>
