@@ -9,18 +9,7 @@ session_start();
 	<?php
 	include "./sources/sources.html";
 	?>
-</head>
-
-<header>
-<!-- HEADER -->
-<?php
-include "./elements/element_header.php";
-?>
-<!--  -->
-</header>
-
-
-<script language="javascript">
+	<script language="javascript">
 	window.onload = function () {
 		console.log("hello world");
 	}
@@ -55,6 +44,15 @@ include "./elements/element_header.php";
 		});
 	});
 </script>
+</head>
+
+<header>
+<!-- HEADER -->
+<?php
+include "./elements/element_header.php";
+?>
+<!--  -->
+</header>
 
 <body>
 	<h2><a class='NamedLink' href=forum.php>Forums/Community</a></h2>
