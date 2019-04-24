@@ -24,8 +24,9 @@ include "./elements/element_header.php";
 <body>
 	<h2>
 		<?php
-		if(isset($_SESSION["logged_in"]))
+		if(isset($_SESSION["logged_in"])) {
 			echo "Welcome to your page, " . $_SESSION["username"] . "!";
+		}
 		else {
 			$_SESSION["message"] = "Sorry, please login to view your user page";
 			header("Location: login.php"); // Redirect if user is not logged in

@@ -26,6 +26,8 @@ if ($password1 != $password2) {
 	$valid = false;
 }
 
+$password1 = password_hash($password1, PASSWORD_DEFAULT);
+
 $dao = new Dao();
 $conn = $dao->getConnection();
 

@@ -33,10 +33,10 @@ include "./elements/element_header.php";
 			lightweight online Japanese-English/English-Japanese dictionary where users can create and update lists and collections
 			as they search for words.
 		</p>
-		<p>
+		<p style='width: 10%; margin: auto'>
 			Links to my things:
 		</p>
-		<p>
+		<p style='width: 10%; margin: auto'>
 			<a class='NamedLink' href='https://github.com/ClarkAllen1556/DankJisho' target='_blank' style='margin: 10px'>
 				<img src='https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png' alt='GitHub' height='30' width='30' />
 			</a>

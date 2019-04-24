@@ -5,10 +5,6 @@ if (session_status() == PHP_SESSION_NONE) {
 
 require_once "./data/Dao.php";
 
-// require_once "Klogger.php";
-// $logger = new KLogger ( "log.txt" , KLogger::EMERGENCY );
-// $logger->emergency("dank");
-
 $dao = new Dao();
 $conn = $dao->getConnection();
 $userEmail = $_POST["email"];
@@ -21,11 +17,11 @@ if($userEmail == NULL || $pass == NULL) {
 	exit();
 }
 
-$query = "select * from Users where Email = '$userEmail' and Password = '$pass';" ;
+$query = "select * from Users where Email = '$userEmail'";// and Password = '$pass';" ;
 
 $result = ($conn->query($query, PDO::FETCH_ASSOC))->fetchObject();
 
-if ($result->Password != $pass) {
+if (!password_verify($pass, $result->Password)) {
 	$_SESSION['message'] = "Error, the password or password was incorrect.";
 	header("Location: login.php");
 	exit();
