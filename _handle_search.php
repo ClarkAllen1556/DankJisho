@@ -3,10 +3,15 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-if(isset($_GET["recent"]))
-	$userSearch = $_GET["recent"];
-elseif(trim($_GET["search"]) == "") {
-	header("Location: index.php");
+echo "get: ";
+var_dump($_GET);
+echo "post: ";
+var_dump($_POST);
+
+if(isset($_SESSION["recent_search"]))
+	return fetchRecent($_SESSION["recent_search"]);
+elseif(!isset($_GET["recent"]) || trim($_GET["search"]) == "") {
+	// header("Location: index.php");
 	exit;
 } elseif(isset($_GET["search"]))
 	$userSearch = $_GET["search"];
@@ -16,6 +21,8 @@ $resultObj = json_decode($resultJSON);
 
 $_SESSION['searchString'] = $userSearch;
 $_SESSION['searched'] = true;
+
+var_dump($_SESSION);
 
 function parseJishoJson () {
 	global $userSearch, $resultJSON, $resultObj;
@@ -57,6 +64,13 @@ function parseJishoJson () {
 
 		addToRecent($userSearch);
 	}
+}
+
+function fetchRecent() {
+	$recent = parseJishoJson();
+	var_dump($recent);
+
+	return $recent;
 }
 
 function printParsedJishoJson() {

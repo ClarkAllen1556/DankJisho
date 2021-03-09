@@ -8,6 +8,39 @@ session_start();
 	<?php
 	include "./sources/sources.html";
 	?>
+
+	<script language='javascript'>
+	function setPageTitle (postInfo) {
+		if(postInfo) {
+			$('#PostTitle').text(postInfo.title);
+			console.log(postInfo.title);
+		}
+	}
+
+	function fetchSearch (recent) {
+		console.log("the recent boy from search.php: " + recent)
+
+		$.ajax({
+			url: './_handle_search.php',
+			data: { search: "recent" },
+			type: 'get',
+			success: (resp) => {
+				console.log("server response: " + resp);
+			},
+			error: (e) => {
+				console.error(e);
+			}
+		});
+	}
+
+	window.onload = () => {
+		console.log(sessionStorage)
+		const recent = sessionStorage.getItem('recent_search');
+		console.log("recent: " + recent)
+		// setPageTitle(recent);
+		// fetchSearch(recent);
+	}
+	</script>
 </head>
 
 <header>
@@ -21,7 +54,8 @@ include "./elements/element_header.php";
 <body>
 	<?php
 	require_once "_handle_search.php";
-
+	var_dump("idk:" . $_GET);
+	print_r($_SESSION);
 	if(isset($_GET['recent_search'])) {
 		$_SESSION['searchString'] = $_GET['recent_search'];
 	}
